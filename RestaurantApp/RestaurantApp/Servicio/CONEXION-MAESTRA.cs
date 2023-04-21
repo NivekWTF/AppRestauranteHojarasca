@@ -9,7 +9,7 @@ namespace RestaurantApp.Servicio
 {
     public class CONEXION_MAESTRA
     {
-        public static string conexion = "Data Source=192.168.0.2;Initial Catalog=BDRestauCSHARP;Integrated Security=False;User Id = SA; Password=1234";
+        public static string conexion = "Data Source=192.168.0.5;Initial Catalog=BDRestauCSHARP;Integrated Security=False;User Id = SA; Password=1234";
         public static SqlConnection conectar = new SqlConnection(conexion);
 
         public static void abrir()

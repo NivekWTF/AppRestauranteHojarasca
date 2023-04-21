@@ -40,6 +40,7 @@ namespace RestaurantApp.Vistas
                 lbl.TextColor = Color.White;
                 lbl.HorizontalTextAlignment = TextAlignment.Center;
                 lbl.VerticalTextAlignment = TextAlignment.Center;
+                
 
                 sl.HeightRequest = 167;
                 sl.WidthRequest = 155;
@@ -72,13 +73,16 @@ namespace RestaurantApp.Vistas
                 Frame frameStackLay = new Frame();
                 frameStackLay.Content = sl;
                 frameStackLay.Margin = 10;
-                frameStackLay.Padding = -1;
+                frameStackLay.Padding = 5;
                 frameStackLay.HeightRequest = sl.HeightRequest;
                 frameStackLay.WidthRequest = sl.WidthRequest;
                 frameStackLay.HasShadow = true;
                 frameStackLay.CornerRadius = 40;
                 frameStackLay.VerticalOptions = LayoutOptions.Center;
                 frameStackLay.HorizontalOptions = LayoutOptions.Center;
+                frameStackLay.BackgroundColor = sl.BackgroundColor;
+                
+                
 
                 PanelUsuarios.Children.Add(frameStackLay);
 
