@@ -1,4 +1,5 @@
 ﻿using RestaurantApp.Modelo;
+using RestaurantApp.Servicio;
 using RestaurantApp.VistaModelo;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace RestaurantApp.Vistas
         }
 
         public string login;
+        public int idUsuario;
 
         private void btn7_Clicked(object sender, EventArgs e)
         {
@@ -101,8 +103,11 @@ namespace RestaurantApp.Vistas
             MUsuarios parametros = new MUsuarios();
             VMUsuarios funcion = new VMUsuarios();
 
-            parametros.Password = txtContraseña.Text;
+            parametros.Password = Bases.Encriptar(txtContraseña.Text);
             parametros.Login = login;
+            funcion.validarUsuarios(parametros, ref idUsuario);
+
+            
 
         }
     }
