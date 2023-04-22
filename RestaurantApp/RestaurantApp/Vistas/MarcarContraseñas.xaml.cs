@@ -20,7 +20,7 @@ namespace RestaurantApp.Vistas
             InitializeComponent();
         }
 
-        public string login;
+        public static string login;
         public int idUsuario;
 
         private void btn7_Clicked(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace RestaurantApp.Vistas
 
         private void btnIniciar_Clicked(object sender, EventArgs e)
         {
-
+            DisplayAlert("Error", "Contraseña Incorrecta", "Aceptar");
         }
 
         private void btnLimpiar_Clicked(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace RestaurantApp.Vistas
 
         private void txtContraseña_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            validarContraseña();
         }
 
         private void validarContraseña()
@@ -107,7 +107,10 @@ namespace RestaurantApp.Vistas
             parametros.Login = login;
             funcion.validarUsuarios(parametros, ref idUsuario);
 
-            
+            if (idUsuario != 0)
+            {
+                ((NavigationPage)this.Parent).PushAsync(new Ventas());
+            }
 
         }
     }

@@ -21,6 +21,8 @@ namespace RestaurantApp.Vistas
             DibujarUsuarios();
         }
 
+        public string login;
+
         public void DibujarUsuarios()
         {
             DataTable dt = new DataTable();
@@ -52,6 +54,7 @@ namespace RestaurantApp.Vistas
                 imgb.Source = ImageSource.FromStream(() => ms);
                 imgb.HeightRequest = 140;
                 imgb.WidthRequest = 140;
+                imgb.CommandParameter = (rdr["Login"].ToString());
 
                 Frame frameImg = new Frame();
                 frameImg.Content = imgb;
@@ -81,13 +84,19 @@ namespace RestaurantApp.Vistas
                 frameStackLay.VerticalOptions = LayoutOptions.Center;
                 frameStackLay.HorizontalOptions = LayoutOptions.Center;
                 frameStackLay.BackgroundColor = sl.BackgroundColor;
-                
-                
-
+            
                 PanelUsuarios.Children.Add(frameStackLay);
+                imgb.Clicked += Imgb_Clicked;
 
 
             }
+        }
+
+        private void Imgb_Clicked(object sender, EventArgs e)
+        {
+            login = ((ImageButton)sender).CommandParameter.ToString();
+            MarcarContraseñas.login = login;
+            ((NavigationPage)this.Parent).PushAsync(new MarcarContraseñas());
         }
     }
 }

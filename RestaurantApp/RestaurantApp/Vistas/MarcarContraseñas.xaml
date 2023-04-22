@@ -15,7 +15,7 @@
                 <RowDefinition Height="80" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Entry x:Name="txtContraseña" TextChanged="txtContraseña_TextChanged" Grid.Row="0" Placeholder="Contraseña" 
+            <Entry IsPassword="True" x:Name="txtContraseña" TextChanged="txtContraseña_TextChanged" Grid.Row="0" Placeholder="Contraseña" 
                    TextColor="White"
                    PlaceholderColor="White"/>
             <Grid Grid.Row="1">
