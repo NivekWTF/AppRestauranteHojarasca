@@ -1,0 +1,30 @@
+﻿.BotonTeclado {
+    background-color: #252525;
+    color: #fff;
+    font-family: Trebuchet MS;
+    font-size: 25;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 14 15;
+    border: 0 solid #000;
+    border-radius: 25;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BotonBorrar {
+    background-color: #252525;
+    color: #fff;
+    border-radius: 25;
+    font-size: 20;
+    font-weight: 800;
+}
+
+.BotonIniciar {
+    background-color: #3F41C4;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20;
+}

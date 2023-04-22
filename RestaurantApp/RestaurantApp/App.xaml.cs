@@ -11,7 +11,7 @@ namespace RestaurantApp
         {
             InitializeComponent();
 
-            MainPage = new Login();
+            MainPage = new MarcarContraseñas();
         }
 
         protected override void OnStart()

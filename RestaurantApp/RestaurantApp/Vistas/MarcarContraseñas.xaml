@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestaurantApp.Vistas.MarcarContraseñas"
+             BackgroundColor="#1E1E1E">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Estilos/Estilos.css"></StyleSheet>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid  Margin="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Entry Grid.Row="0" Placeholder="Contraseña" 
+                   TextColor="White"
+                   PlaceholderColor="White"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Text="7" StyleClass="BotonTeclado"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="8" StyleClass="BotonTeclado"/>
+                <Button Grid.Row="0" Grid.Column="2" Text="9" StyleClass="BotonTeclado"/>
+
+                <Button Grid.Row="1" Grid.Column="0" Text="4" StyleClass="BotonTeclado"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="5" StyleClass="BotonTeclado"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="6" StyleClass="BotonTeclado"/>
+
+                <Button Grid.Row="2" Grid.Column="0" Text="1" StyleClass="BotonTeclado"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="2" StyleClass="BotonTeclado"/>
+                <Button Grid.Row="2" Grid.Column="2" Text="3" StyleClass="BotonTeclado"/>
+
+                <Button Grid.Row="3" Grid.Column="0" Text="Borrar" StyleClass="BotonBorrar"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="0" StyleClass="BotonTeclado"/>
+                <ImageButton Grid.Row="3" Grid.Column="2" Source="xamagon.png" StyleClass="BotonTeclado"/>
+
+                <Button Grid.Row="4" Grid.ColumnSpan="3" Text="Iniciar" CornerRadius="25" Margin="5"
+                       StyleClass="BotonIniciar" />
+
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
