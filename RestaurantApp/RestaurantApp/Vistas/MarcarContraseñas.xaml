@@ -15,7 +15,7 @@
                 <RowDefinition Height="80" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Entry Grid.Row="0" Placeholder="Contraseña" 
+            <Entry x:Name="txtContraseña" TextChanged="txtContraseña_TextChanged" Grid.Row="0" Placeholder="Contraseña" 
                    TextColor="White"
                    PlaceholderColor="White"/>
             <Grid Grid.Row="1">
@@ -31,23 +31,24 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="80" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Text="7" StyleClass="BotonTeclado"/>
-                <Button Grid.Row="0" Grid.Column="1" Text="8" StyleClass="BotonTeclado"/>
-                <Button Grid.Row="0" Grid.Column="2" Text="9" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn7" Clicked="btn7_Clicked" Grid.Row="0" Grid.Column="0" Text="7" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn8" Clicked="btn8_Clicked" Grid.Column="1" Text="8" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn9" Clicked="btn9_Clicked" Grid.Row="0" Grid.Column="2" Text="9" StyleClass="BotonTeclado"/>
 
-                <Button Grid.Row="1" Grid.Column="0" Text="4" StyleClass="BotonTeclado"/>
-                <Button Grid.Row="1" Grid.Column="1" Text="5" StyleClass="BotonTeclado"/>
-                <Button Grid.Row="1" Grid.Column="2" Text="6" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn4" Clicked="btn4_Clicked"  Grid.Row="1" Grid.Column="0" Text="4" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn5" Clicked="btn5_Clicked" Grid.Row="1" Grid.Column="1" Text="5" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn6" Clicked="btn6_Clicked" Grid.Row="1" Grid.Column="2" Text="6" StyleClass="BotonTeclado"/>
 
-                <Button Grid.Row="2" Grid.Column="0" Text="1" StyleClass="BotonTeclado"/>
-                <Button Grid.Row="2" Grid.Column="1" Text="2" StyleClass="BotonTeclado"/>
-                <Button Grid.Row="2" Grid.Column="2" Text="3" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn1" Clicked="btn1_Clicked" Grid.Row="2" Grid.Column="0" Text="1" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn2" Clicked="btn2_Clicked" Grid.Row="2" Grid.Column="1" Text="2" StyleClass="BotonTeclado"/>
+                <Button x:Name="btn3" Clicked="btn3_Clicked" Grid.Row="2" Grid.Column="2" Text="3" StyleClass="BotonTeclado"/>
 
-                <Button Grid.Row="3" Grid.Column="0" Text="Borrar" StyleClass="BotonBorrar"/>
-                <Button Grid.Row="3" Grid.Column="1" Text="0" StyleClass="BotonTeclado"/>
-                <ImageButton Grid.Row="3" Grid.Column="2" Source="xamagon.png" StyleClass="BotonTeclado"/>
+                <Button x:Name="btnBorrar" Clicked="btnBorrar_Clicked" Grid.Row="3" Grid.Column="0" Text="Borrar" StyleClass="BotonBorrar"/>
+                <Button x:Name="btn0" Clicked="btn0_Clicked" Grid.Row="3" Grid.Column="1" Text="0" StyleClass="BotonTeclado"/>
 
-                <Button Grid.Row="4" Grid.ColumnSpan="3" Text="Iniciar" CornerRadius="25" Margin="5"
+                <ImageButton x:Name="btnLimpiar" Clicked="btnLimpiar_Clicked"  Grid.Row="3" Grid.Column="2" Source="xamagon.png" StyleClass="BotonTeclado"/>
+
+                <Button x:Name="btnIniciar" Clicked="btnIniciar_Clicked" Grid.Row="4" Grid.ColumnSpan="3" Text="Iniciar" CornerRadius="25" Margin="5"
                        StyleClass="BotonIniciar" />
 
 
