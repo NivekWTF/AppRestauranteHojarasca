@@ -109,7 +109,7 @@ namespace RestaurantApp.Vistas
 
             if (idUsuario != 0)
             {
-                ((NavigationPage)this.Parent).PushAsync(new Ventas());
+                ((NavigationPage)this.Parent).PushAsync(new Mesas());
             }
 
         }
